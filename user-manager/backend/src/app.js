@@ -21,7 +21,7 @@ app.use('/api/users', userRoutes);
 
 // ─── Ruta raíz (health check) ────────────────────────────────────────────────
 app.get('/', (_req, res) => {
-  res.json({ status: 'ok', message: 'User Manager API running 🚀' });
+  res.json({ status: 'ok', message: 'User Manager API running ' });
 });
 
 // ─── Manejo de rutas no encontradas ──────────────────────────────────────────
