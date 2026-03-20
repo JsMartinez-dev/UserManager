@@ -1,6 +1,7 @@
 #  User Manager — Node.js + React + PostgreSQL
+# User Manager — Node.js + React + PostgreSQL
 
-Aplicación full-stack con arquitectura en capas para gestión de usuarios.
+# Aplicación full-stack con arquitectura en capas para gestión de usuarios.
 
 ---
 
