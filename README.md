@@ -1,10 +1,10 @@
-# 👤 User Manager — Node.js + React + PostgreSQL
+#  User Manager — Node.js + React + PostgreSQL
 
 Aplicación full-stack con arquitectura en capas para gestión de usuarios.
 
 ---
 
-## 🗂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 user-manager/
@@ -60,7 +60,7 @@ user-manager/
 
 ---
 
-## 🧱 Arquitectura en capas (Backend)
+##  Arquitectura en capas (Backend)
 
 ```
 Request HTTP
@@ -74,73 +74,3 @@ Request HTTP
 [   Model    ]   → Representa la entidad tal como existe en DB
 ```
 
-### DTOs
-| DTO | Propósito |
-|-----|-----------|
-| `CreateUserDto` (back) | Valida y sanitiza datos de entrada |
-| `UserResponseDto` | Controla qué campos expone la API |
-| `CreateUserDto` (front) | Validación en cliente antes del fetch |
-
----
-
-## 🚀 Instalación y puesta en marcha
-
-### 1. Base de datos
-
-```sql
--- En psql o pgAdmin ejecuta:
-\i backend/database/init.sql
-```
-
-### 2. Backend
-
-```bash
-cd backend
-cp .env.example .env          # Edita con tus credenciales PostgreSQL
-npm install
-npm run dev                   # http://localhost:3001
-```
-
-### 3. Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev                   # http://localhost:5173
-```
-
----
-
-## 📡 Endpoints de la API
-
-| Método | Ruta            | Descripción             |
-|--------|-----------------|-------------------------|
-| GET    | /api/users      | Lista todos los usuarios|
-| GET    | /api/users/:id  | Obtiene uno por ID      |
-| POST   | /api/users      | Crea un nuevo usuario   |
-
-### Payload POST /api/users
-
-```json
-{
-  "name":  "Ana Martínez",
-  "email": "ana@ejemplo.com",
-  "phone": "+57 300 000 0000"   // opcional
-}
-```
-
-### Respuesta exitosa
-
-```json
-{
-  "success": true,
-  "message": "Usuario creado exitosamente.",
-  "data": {
-    "id": 4,
-    "name": "Ana Martínez",
-    "email": "ana@ejemplo.com",
-    "phone": "+57 300 000 0000",
-    "createdAt": "2025-01-01T00:00:00.000Z"
-  }
-}
-```
