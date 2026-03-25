@@ -25,7 +25,7 @@ pool.connect((err, client, release) => {
     return;
   }
   release();
-  console.log('✅ Conexión a PostgreSQL establecida correctamente');
+  console.log('✅ Conexión a PostgreSQL establecida correctamente-AZURE');
 });
 module.exports = pool;
 
@@ -36,6 +36,7 @@ module.exports = pool;
 
 /*
 Local:
+
 const { Pool } = require('pg');
 require('dotenv').config();
 
@@ -54,8 +55,9 @@ pool.connect((err, client, release) => {
     return;
   }
   release();
-  console.log('✅ Conexión a PostgreSQL establecida correctamente');
+  console.log('✅ Conexión a PostgreSQL establecida correctamente-LOCAL');
 });
 
 module.exports = pool;
+
 */
